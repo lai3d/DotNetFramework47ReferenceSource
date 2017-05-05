@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{40a894fb-e9ea-4dcc-bdea-1cdaa97310e9}</ProjectGuid>
+    <OutputPath>.</OutputPath>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <UseVSHostingProcess>False</UseVSHostingProcess>
+    <NoStdLib>True</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <DefineConstants>CODE_ANALYSIS_BASELINE;TRACE;RETAIL;WIN32</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " >
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\clr\src\bcl\mscorlib.csproj">
+      <Project>{cee2f309-bc3a-4584-8db6-119a4e5ea519}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\SMDiagnostics\SMDiagnostics.csproj">
+      <Project>{483fa3f7-504f-48df-ab9d-b54226cbe6fb}</Project>
+      <Name>SMDiagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\System.csproj">
+      <Project>{93e0d602-f830-478d-b585-6181aeeaf8aa}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Configuration\System.Configuration.csproj">
+      <Project>{bdaea912-68ca-45da-948e-7e503cb326b4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Core\System.Core.csproj">
+      <Project>{568b5820-7218-4652-9abf-6141140c45b1}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\IdentityModel\System.IdentityModel.csproj">
+      <Project>{90c9cd36-105e-404f-a51f-3b336ceff886}</Project>
+      <Name>System.IdentityModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx40\System.Runtime.DurableInstancing\System.Runtime.DurableInstancing.csproj">
+      <Project>{03371bc7-7938-462d-9548-f5eaa61c8dbb}</Project>
+      <Name>System.Runtime.DurableInstancing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\Serialization\System.Runtime.Serialization.csproj">
+      <Project>{bd901c9d-f103-4a54-9f31-2219abe428d0}</Project>
+      <Name>System.Runtime.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\ServiceModel\System.ServiceModel.csproj">
+      <Project>{e075699a-ae95-41c1-b75c-e520f7da52a2}</Project>
+      <Name>System.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\System.ServiceModel.Activation\System.ServiceModel.Activation.csproj">
+      <Project>{0d4e967b-c303-415d-ae62-021b28dbf6ee}</Project>
+      <Name>System.ServiceModel.Activation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx40\System.ServiceModel.Channels\System.ServiceModel.Channels.csproj">
+      <Project>{cdf0459e-47aa-4f1f-ada0-be4be8380611}</Project>
+      <Name>System.ServiceModel.Channels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System.ServiceModel.Internals\System.ServiceModel.Internals.csproj">
+      <Project>{41a266a6-7b9d-4066-af5c-02e47744affb}</Project>
+      <Name>System.ServiceModel.Internals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\xsp\system\Web\System.Web.csproj">
+      <Project>{f8e00e81-933c-4cd7-b455-947234aa2a42}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\xsp\system\Extensions\System.Web.Extensions.csproj">
+      <Project>{a96fb54b-917b-4de8-a5fd-bdc6f99d01af}</Project>
+      <Name>System.Web.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx20\System.Web.Services\System.Web.Services.csproj">
+      <Project>{51525479-3333-4904-81af-373841bcd8a4}</Project>
+      <Name>System.Web.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Xml\System.Xml.csproj">
+      <Project>{89407287-3a00-4b8e-a685-1d93818e1bbb}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\XLinq\System.Xml.Linq.csproj">
+      <Project>{acd6a198-cf43-47bc-b177-4a7cdf3188ef}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="System\ServiceModel\Activation\WebScriptServiceHostFactory.cs" />
+    <Compile Include="System\ServiceModel\Activation\WebServiceHostFactory.cs" />
+    <Compile Include="System\ServiceModel\Channels\HttpStreamMessage.cs" />
+    <Compile Include="System\ServiceModel\Channels\JavascriptCallbackResponseProperty.cs" />
+    <Compile Include="System\ServiceModel\Channels\JavascriptXmlWriterWrapper.cs" />
+    <Compile Include="System\ServiceModel\Channels\JsonMessageEncoderFactory.cs" />
+    <Compile Include="System\ServiceModel\Channels\RawContentTypeMapper.cs" />
+    <Compile Include="System\ServiceModel\Channels\StreamBodyWriter.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebBodyFormatMessageProperty.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebContentFormat.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebContentFormatHelper.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebContentTypeMapper.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebHttpBindingDefaults.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebMessageEncoderFactory.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebMessageEncodingBindingElement.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebScriptMetadataMessage.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebScriptMetadataMessageEncoderFactory.cs" />
+    <Compile Include="System\ServiceModel\Channels\WebScriptMetadataMessageEncodingBindingElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\AppSettings.cs" />
+    <Compile Include="System\ServiceModel\Configuration\InternalEnumValidator.cs" />
+    <Compile Include="System\ServiceModel\Configuration\InternalEnumValidatorAttribute.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebConfigurationStrings.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebEncodingValidator.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebEncodingValidatorAttribute.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpBindingCollectionElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpBindingElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpEndpointCollectionElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpEndpointElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebHttpSecurityElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebMessageEncodingElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebScriptEnablingElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebScriptEndpointCollectionElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WebScriptEndpointElement.cs" />
+    <Compile Include="System\ServiceModel\Description\DataContractJsonSerializerOperationBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\JsonFaultDetail.cs" />
+    <Compile Include="System\ServiceModel\Description\WCFServiceClientProxyGenerator.cs" />
+    <Compile Include="System\ServiceModel\Description\WebHttpBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\WebHttpEndpoint.cs" />
+    <Compile Include="System\ServiceModel\Description\WebScriptClientGenerator.cs" />
+    <Compile Include="System\ServiceModel\Description\WebScriptEnablingBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\WebScriptEndpoint.cs" />
+    <Compile Include="System\ServiceModel\Description\WebServiceEndpoint.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\CompositeClientFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\CompositeDispatchFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ContentTypeSettingClientMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ContentTypeSettingDispatchMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DataContractJsonSerializerOperationFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DemultiplexingClientMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DemultiplexingDispatchMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\FormatSelectingMessageInspector.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HelpExampleGenerator.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HelpHtmlBuilder.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HelpOperationInvoker.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HelpPage.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HttpStreamFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\HttpUnhandledOperationInvoker.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\JavascriptCallbackMessageInspector.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\JsonFormatMapping.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\JsonQueryStringConverter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\MultiplexingDispatchMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\MultiplexingFormatMapping.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\NameValueCache.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\QueryStringConverter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\SingleBodyParameterDataContractMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\SingleBodyParameterMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\SingleBodyParameterXmlSerializerMessageFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\UnwrappedTypesXmlSerializerManager.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\UriTemplateClientFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\UriTemplateDispatchFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebErrorHandler.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebFaultClientMessageInspector.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebFaultFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebHttpDispatchOperationSelector.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebHttpDispatchOperationSelectorData.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WebScriptMetadataFormatter.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\XmlFormatMapping.cs" />
+    <Compile Include="System\ServiceModel\Web\AspNetCacheProfileAttribute.cs" />
+    <Compile Include="System\ServiceModel\Web\AutomaticEndpointGenerator.cs" />
+    <Compile Include="System\ServiceModel\Web\CachingParameterInspector.cs" />
+    <Compile Include="System\ServiceModel\Web\HttpDateParse.cs" />
+    <Compile Include="System\ServiceModel\Web\IncomingWebRequestContext.cs" />
+    <Compile Include="System\ServiceModel\Web\IncomingWebResponseContext.cs" />
+    <Compile Include="System\ServiceModel\Web\IWebFaultException.cs" />
+    <Compile Include="System\ServiceModel\Web\JavascriptCallbackBehaviorAttribute.cs" />
+    <Compile Include="System\ServiceModel\Web\OutgoingWebRequestContext.cs" />
+    <Compile Include="System\ServiceModel\Web\OutgoingWebResponseContext.cs" />
+    <Compile Include="System\ServiceModel\Web\Utility.cs" />
+    <Compile Include="System\ServiceModel\Web\WebChannelFactory.cs" />
+    <Compile Include="System\ServiceModel\Web\WebFaultException.cs" />
+    <Compile Include="System\ServiceModel\Web\WebGetAttribute.cs" />
+    <Compile Include="System\ServiceModel\Web\WebInvokeAttribute.cs" />
+    <Compile Include="System\ServiceModel\Web\WebMessageBodyStyle.cs" />
+    <Compile Include="System\ServiceModel\Web\WebMessageBodyStyleHelper.cs" />
+    <Compile Include="System\ServiceModel\Web\WebMessageFormat.cs" />
+    <Compile Include="System\ServiceModel\Web\WebMessageFormatHelper.cs" />
+    <Compile Include="System\ServiceModel\Web\WebOperationContext.cs" />
+    <Compile Include="System\ServiceModel\Web\WebServiceHost.cs" />
+    <Compile Include="System\ServiceModel\WebHttpBinding.cs" />
+    <Compile Include="System\ServiceModel\WebHttpSecurity.cs" />
+    <Compile Include="System\ServiceModel\WebHttpSecurityMode.cs" />
+    <Compile Include="System\ServiceModel\WebHttpSecurityModeHelper.cs" />
+    <Compile Include="System\ServiceModel\WebScriptServiceHost.cs" />
+    <Compile Include="TD.Designer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{9a866310-5ac4-4956-a6cb-06289824d9d9}</ProjectGuid>
+    <OutputPath>.</OutputPath>
+    <OutputType>Library</OutputType>
+    <AssemblyName>WsatConfig</AssemblyName>
+    <UseVSHostingProcess>False</UseVSHostingProcess>
+    <NoStdLib>True</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <DefineConstants>CODE_ANALYSIS_BASELINE;WSAT_CMDLINE;TRACE;RETAIL;WIN32</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " >
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\clr\src\bcl\mscorlib.csproj">
+      <Project>{cee2f309-bc3a-4584-8db6-119a4e5ea519}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\fx\src\System.csproj">
+      <Project>{93e0d602-f830-478d-b585-6181aeeaf8aa}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\fx\src\data\System.Data.csproj">
+      <Project>{7875f5f8-9a58-462e-9c9b-1508e82bfb7a}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\fx\src\System.Drawing.csproj">
+      <Project>{b4eb50b7-c0c4-43c1-9350-eb2ed0ae2c83}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\fx\src\wmi\managed\System\Management\System.Management.csproj">
+      <Project>{28dcfc02-dbea-4bac-aca4-8d468c2d902b}</Project>
+      <Name>System.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\clr\src\managedlibraries\security\System.Security.csproj">
+      <Project>{ae2ca399-653e-4376-8e7f-fa6cb2b122b7}</Project>
+      <Name>System.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\fx\src\System.Windows.Forms.csproj">
+      <Project>{80ef5c82-9e80-40c7-af99-7edd817becd3}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\WcfCommonResStrings\CommonResStrings.cs" />
+    <Compile Include="CommandLine\ArgumentsParser.cs" />
+    <Compile Include="CommandLine\ConsoleEntryPoint.cs" />
+    <Compile Include="CommandLine\OptionUsage.cs" />
+    <Compile Include="Configuration\CertificateManager.cs" />
+    <Compile Include="Configuration\ClusterRegistryConfigurationProvider.cs" />
+    <Compile Include="Configuration\ClusterSafeNativeMethods.cs" />
+    <Compile Include="Configuration\CommandLineOption.cs" />
+    <Compile Include="Configuration\ConfigurationProvider.cs" />
+    <Compile Include="Configuration\FirewallWrapper.cs" />
+    <Compile Include="Configuration\HttpWrapper.cs" />
+    <Compile Include="Configuration\MsdtcClusterUtils.cs" />
+    <Compile Include="Configuration\MsdtcWrapper.cs" />
+    <Compile Include="Configuration\NetFwTypeLib.cs" />
+    <Compile Include="Configuration\QfeChecker.cs" />
+    <Compile Include="Configuration\RegistryConfigurationProvider.cs" />
+    <Compile Include="Configuration\RegistryExceptionHelper.cs" />
+    <Compile Include="Configuration\RemoteHelper.cs" />
+    <Compile Include="Configuration\SafeCertificateContext.cs" />
+    <Compile Include="Configuration\SafeCertificateStore.cs" />
+    <Compile Include="Configuration\SafeIUnknown.cs" />
+    <Compile Include="Configuration\SafeLocalAllocation.cs" />
+    <Compile Include="Configuration\SafeNativeMethods.cs" />
+    <Compile Include="Configuration\SafeRegistryKey.cs" />
+    <Compile Include="Configuration\StdRegProviderWrapper.cs" />
+    <Compile Include="Configuration\Utilities.cs" />
+    <Compile Include="Configuration\WsatAdminErrorCode.cs" />
+    <Compile Include="Configuration\WsatAdminException.cs" />
+    <Compile Include="Configuration\WsatConfiguration.cs" />
+    <Compile Include="Configuration\WsatKeys.cs" />
+    <Compile Include="Configuration\WsatServiceAddress.cs" />
+    <Compile Include="Configuration\WsatServiceCertificate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

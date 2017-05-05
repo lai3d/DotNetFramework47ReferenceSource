@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{be2551fc-54be-4738-891b-5bf20b855c8b}</ProjectGuid>
+    <OutputPath>.</OutputPath>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <UseVSHostingProcess>False</UseVSHostingProcess>
+    <NoStdLib>True</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <DefineConstants>CODE_ANALYSIS_BASELINE;TRACE;RETAIL;WIN32</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " >
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\clr\src\bcl\mscorlib.csproj">
+      <Project>{cee2f309-bc3a-4584-8db6-119a4e5ea519}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\SMDiagnostics\SMDiagnostics.csproj">
+      <Project>{483fa3f7-504f-48df-ab9d-b54226cbe6fb}</Project>
+      <Name>SMDiagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\System.csproj">
+      <Project>{93e0d602-f830-478d-b585-6181aeeaf8aa}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx40\System.Activities\System.Activities.csproj">
+      <Project>{6410256f-db99-45a1-be9e-1d0d43b1f876}</Project>
+      <Name>System.Activities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Configuration\System.Configuration.csproj">
+      <Project>{bdaea912-68ca-45da-948e-7e503cb326b4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Core\System.Core.csproj">
+      <Project>{568b5820-7218-4652-9abf-6141140c45b1}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\data\System.Data.csproj">
+      <Project>{7875f5f8-9a58-462e-9c9b-1508e82bfb7a}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\System.Drawing.csproj">
+      <Project>{b4eb50b7-c0c4-43c1-9350-eb2ed0ae2c83}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\IdentityModel\System.IdentityModel.csproj">
+      <Project>{90c9cd36-105e-404f-a51f-3b336ceff886}</Project>
+      <Name>System.IdentityModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx20\System.Messaging\System.Messaging.csproj">
+      <Project>{dcb690ca-2272-4698-b33f-7697b5cc9e04}</Project>
+      <Name>System.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx40\System.Runtime.DurableInstancing\System.Runtime.DurableInstancing.csproj">
+      <Project>{03371bc7-7938-462d-9548-f5eaa61c8dbb}</Project>
+      <Name>System.Runtime.DurableInstancing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\Serialization\System.Runtime.Serialization.csproj">
+      <Project>{bd901c9d-f103-4a54-9f31-2219abe428d0}</Project>
+      <Name>System.Runtime.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\ServiceModel\System.ServiceModel.csproj">
+      <Project>{e075699a-ae95-41c1-b75c-e520f7da52a2}</Project>
+      <Name>System.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\System.ServiceModel.Activation\System.ServiceModel.Activation.csproj">
+      <Project>{0d4e967b-c303-415d-ae62-021b28dbf6ee}</Project>
+      <Name>System.ServiceModel.Activation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx40\System.ServiceModel.Activities\System.ServiceModel.Activities.csproj">
+      <Project>{e9bb8ccb-36f7-4198-a9a5-d9cf0ceb9c0b}</Project>
+      <Name>System.ServiceModel.Activities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System.ServiceModel.Internals\System.ServiceModel.Internals.csproj">
+      <Project>{41a266a6-7b9d-4066-af5c-02e47744affb}</Project>
+      <Name>System.ServiceModel.Internals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx20\System.Transactions\System.Transactions.csproj">
+      <Project>{434bdce4-cf74-432c-8a80-b3ec5c69efe0}</Project>
+      <Name>System.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\xsp\system\Web\System.Web.csproj">
+      <Project>{f8e00e81-933c-4cd7-b455-947234aa2a42}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetFx20\System.Web.Services\System.Web.Services.csproj">
+      <Project>{51525479-3333-4904-81af-373841bcd8a4}</Project>
+      <Name>System.Web.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\System.Windows.Forms.csproj">
+      <Project>{80ef5c82-9e80-40c7-af99-7edd817becd3}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WF\Activities\System.Workflow.Activities.csproj">
+      <Project>{54fef74a-df3c-4673-a50f-b41647399ee2}</Project>
+      <Name>System.Workflow.Activities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WF\Common\System.Workflow.ComponentModel.csproj">
+      <Project>{e1df575a-e0be-4355-b9dd-d4ad79c086f9}</Project>
+      <Name>System.Workflow.ComponentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WF\RunTime\System.Workflow.Runtime.csproj">
+      <Project>{278f2b67-4231-41c7-9bba-67297bc80611}</Project>
+      <Name>System.Workflow.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\Xml\System.Xml.csproj">
+      <Project>{89407287-3a00-4b8e-a685-1d93818e1bbb}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\fx\src\XLinq\System.Xml.Linq.csproj">
+      <Project>{acd6a198-cf43-47bc-b177-4a7cdf3188ef}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ImageResources.designer.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="System\ServiceModel\Activation\WorkflowServiceBuildProvider.cs" />
+    <Compile Include="System\ServiceModel\Activation\WorkflowServiceHostFactory.cs" />
+    <Compile Include="System\ServiceModel\Activities\Description\WorkflowRuntimeEndpoint.cs" />
+    <Compile Include="System\ServiceModel\Activities\Description\WorkflowRuntimeServicesBehavior.cs" />
+    <Compile Include="System\ServiceModel\Activities\ExternalDataExchangeClient.cs" />
+    <Compile Include="System\ServiceModel\Activities\IExternalDataExchange.cs" />
+    <Compile Include="System\ServiceModel\Activities\WorkflowClientDeliverMessageWrapper.cs" />
+    <Compile Include="System\ServiceModel\Activities\WorkflowRuntimeServicesExtensionProvider.cs" />
+    <Compile Include="System\ServiceModel\Configuration\ExtendedWorkflowRuntimeServiceElementCollection.cs" />
+    <Compile Include="System\ServiceModel\Configuration\PersistenceProviderElement.cs" />
+    <Compile Include="System\ServiceModel\Configuration\WorkflowRuntimeElement.cs" />
+    <Compile Include="System\ServiceModel\Description\DescriptionCreator.cs" />
+    <Compile Include="System\ServiceModel\Description\DurableOperationAttribute.cs" />
+    <Compile Include="System\ServiceModel\Description\DurableServiceAttribute.cs" />
+    <Compile Include="System\ServiceModel\Description\IServiceDescriptionBuilder.cs" />
+    <Compile Include="System\ServiceModel\Description\PersistenceProviderBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\ServiceDescriptionContext.cs" />
+    <Compile Include="System\ServiceModel\Description\UnknownExceptionAction.cs" />
+    <Compile Include="System\ServiceModel\Description\UnknownExceptionActionHelper.cs" />
+    <Compile Include="System\ServiceModel\Description\WorkflowOperationBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\WorkflowRuntimeBehavior.cs" />
+    <Compile Include="System\ServiceModel\Description\WorkflowServiceBehavior.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableDispatcherAddressingFault.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableErrorHandler.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableInstance.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableInstanceContextProvider.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableInstanceProvider.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableMessageDispatchInspector.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableOperationContext.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\DurableRuntimeValidator.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ServiceDurableInstance.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ServiceDurableInstanceContextProvider.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ServiceErrorHandler.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\ServiceOperationInvoker.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WellknownContextProperties.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowDispatchContext.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowDurableInstance.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowInstanceContextProvider.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowInstanceLifeTimeManagerExtension.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowInstanceProvider.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowOperationAsyncResult.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowOperationErrorHandler.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowOperationFault.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowOperationInvoker.cs" />
+    <Compile Include="System\ServiceModel\Dispatcher\WorkflowRequestContext.cs" />
+    <Compile Include="System\ServiceModel\Persistence\InstanceLockException.cs" />
+    <Compile Include="System\ServiceModel\Persistence\InstanceNotFoundException.cs" />
+    <Compile Include="System\ServiceModel\Persistence\LockingPersistenceProvider.cs" />
+    <Compile Include="System\ServiceModel\Persistence\PersistenceException.cs" />
+    <Compile Include="System\ServiceModel\Persistence\PersistenceProvider.cs" />
+    <Compile Include="System\ServiceModel\Persistence\PersistenceProviderFactory.cs" />
+    <Compile Include="System\ServiceModel\Persistence\SqlPersistenceProviderFactory.cs" />
+    <Compile Include="System\ServiceModel\QueueNameHelper.cs" />
+    <Compile Include="System\ServiceModel\Security\SerializableAuthorizationContext.cs" />
+    <Compile Include="System\ServiceModel\SerializableReadOnlyDictionary.cs" />
+    <Compile Include="System\ServiceModel\WorkflowServiceHost.cs" />
+    <Compile Include="System\Workflow\Activities\ChannelToken.cs" />
+    <Compile Include="System\Workflow\Activities\ChannelTokenTypeConverter.cs" />
+    <Compile Include="System\Workflow\Activities\ContextToken.cs" />
+    <Compile Include="System\Workflow\Activities\ContextTokenTypeConverter.cs" />
+    <Compile Include="System\Workflow\Activities\ContractMethodInfo.cs" />
+    <Compile Include="System\Workflow\Activities\ContractMethodParameterInfo.cs" />
+    <Compile Include="System\Workflow\Activities\ContractType.cs" />
+    <Compile Include="System\Workflow\Activities\Design\EditableLabelControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\GradientPanel.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ListItemDetailViewAttribute.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ListItemViewAttribute.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ListItemViewControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\NamedObjectList.cs" />
+    <Compile Include="System\Workflow\Activities\Design\OperationPickerDialog.cs" />
+    <Compile Include="System\Workflow\Activities\Design\OperationPickerDialog.designer.cs" />
+    <Compile Include="System\Workflow\Activities\Design\RichListBox.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractDetailViewControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractDetailViewControl.Designer.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractListItem.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractListItemList.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractViewControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceContractViewControl.Designer.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationDetailViewControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationDetailViewControl.designer.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationListItem.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationListItemList.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationUIEditor.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationViewControl.cs" />
+    <Compile Include="System\Workflow\Activities\Design\ServiceOperationViewControl.designer.cs" />
+    <Compile Include="System\Workflow\Activities\Design\TypedServiceOperationListItem.cs" />
+    <Compile Include="System\Workflow\Activities\Design\WorkflowServiceOperationListItem.cs" />
+    <Compile Include="System\Workflow\Activities\DynamicContractTypeBuilder.cs" />
+    <Compile Include="System\Workflow\Activities\LogicalChannel.cs" />
+    <Compile Include="System\Workflow\Activities\LogicalChannelCollection.cs" />
+    <Compile Include="System\Workflow\Activities\OperationInfo.cs" />
+    <Compile Include="System\Workflow\Activities\OperationInfoBase.cs" />
+    <Compile Include="System\Workflow\Activities\OperationParameterInfo.cs" />
+    <Compile Include="System\Workflow\Activities\OperationParameterInfoCollection.cs" />
+    <Compile Include="System\Workflow\Activities\OperationValidationEventArgs.cs" />
+    <Compile Include="System\Workflow\Activities\PrincipalPermissionServiceAuthorizationManager.cs" />
+    <Compile Include="System\Workflow\Activities\QueueInitializationMode.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveActivity.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveActivityDesigner.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveActivityDesignerTheme.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveActivityValidator.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveContext.cs" />
+    <Compile Include="System\Workflow\Activities\ReceiveContextCollection.cs" />
+    <Compile Include="System\Workflow\Activities\SendActivity.cs" />
+    <Compile Include="System\Workflow\Activities\SendActivityDesigner.cs" />
+    <Compile Include="System\Workflow\Activities\SendActivityDesignerTheme.cs" />
+    <Compile Include="System\Workflow\Activities\SendActivityEventArgs.cs" />
+    <Compile Include="System\Workflow\Activities\SendActivityValidator.cs" />
+    <Compile Include="System\Workflow\Activities\ServiceOperationHelpers.cs" />
+    <Compile Include="System\Workflow\Activities\ServiceOperationInfoTypeConverter.cs" />
+    <Compile Include="System\Workflow\Activities\ServiceOperationsImplementedValidationMarker.cs" />
+    <Compile Include="System\Workflow\Activities\TypedOperationInfo.cs" />
+    <Compile Include="System\Workflow\Activities\ValidationHelper.cs" />
+    <Compile Include="System\Workflow\Activities\WorkflowServiceAttributes.cs" />
+    <Compile Include="System\Workflow\Activities\WorkflowServiceAttributesDynamicPropertyValidator.cs" />
+    <Compile Include="System\Workflow\Activities\WorkflowServiceAttributesPropertyProviderExtender.cs" />
+    <Compile Include="System\Workflow\Activities\WorkflowServiceAttributesTypeConverter.cs" />
+    <Compile Include="System\Workflow\Activities\WorkflowServicesErrorNumbers.cs" />
+    <Compile Include="System\Workflow\ComponentModel\Design\ActivityComparer.cs" />
+    <Compile Include="System\Workflow\ComponentModel\Design\ActivityDesignerHighlighter.cs" />
+    <Compile Include="System\Workflow\ComponentModel\Design\DesignerPainter.cs" />
+    <Compile Include="System\Workflow\ComponentModel\Design\FindSimilarActivitiesVerb.cs" />
+    <Compile Include="System\Workflow\ComponentModel\Design\HighlightOverlayGlyph.cs" />
+    <Compile Include="System\Workflow\Runtime\CompiledWorkflowDefinitionContext.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\ChannelManager.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\ChannelManagerHelpers.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\ChannelManagerService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SynchronizationContextWorkflowSchedulerService.cs" />
+    <Compile Include="System\Workflow\Runtime\StreamedWorkflowDefinitionContext.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowDefinitionContext.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
